@@ -1,3 +1,6 @@
+/*
+Package bulan implements a simple library for parsing to Indonesia name of Month.
+*/
 package bulan
 
 import (
@@ -6,19 +9,20 @@ import (
 )
 
 type (
-	bulan string
+	//Bulan is type aliases for having some functions
+	Bulan string
 )
 
 var datetime time.Time = time.Now()
 
 //NewBulan creates initialization time for bulan
-func NewBulan(time time.Time) bulan {
+func NewBulan(time time.Time) Bulan {
 	datetime = time
-	return bulan("")
+	return Bulan("")
 }
 
 //Long returns the Indonesia name of "bulan" in Long and Title Case
-func (b bulan) Long() bulan {
+func (b Bulan) Long() Bulan {
 	switch datetime.Month() {
 	case 1:
 		return "Januari"
@@ -49,21 +53,21 @@ func (b bulan) Long() bulan {
 }
 
 //Short returns the Indonesia name of "bulan" in Short and Title Case
-func (b bulan) Short() bulan {
+func (b Bulan) Short() Bulan {
 	return b.Long()[:3]
 }
 
 //ToString returns the Indonesia name of "bulan" in to string type
-func (b bulan) ToString() string {
+func (b Bulan) ToString() string {
 	return string(b)
 }
 
 //LowerCase returns lowercase of "bulan"
-func (b bulan) LowerCase() bulan {
-	return bulan(strings.ToLower(b.ToString()))
+func (b Bulan) LowerCase() Bulan {
+	return Bulan(strings.ToLower(b.ToString()))
 }
 
 //UpperCase returns UPPERCASE of "bulan"
-func (b bulan) UpperCase() bulan {
-	return bulan(strings.ToUpper(b.ToString()))
+func (b Bulan) UpperCase() Bulan {
+	return Bulan(strings.ToUpper(b.ToString()))
 }
