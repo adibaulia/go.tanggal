@@ -38,13 +38,3 @@ func Test_NewBulanShort(t *testing.T) {
 	bulan := tanggal.NewBulan(date).Short().ToString()
 	assert.Equal(t, "Des", bulan)
 }
-
-func Test_NewBulanUpperCase(t *testing.T) {
-	bulan := tanggal.NewBulan(date).UpperCase().ToString()
-	assert.Equal(t, "DESEMBER", bulan)
-}
-
-func Test_NewBulanLowerCase(t *testing.T) {
-	bulan := tanggal.NewBulan(date).LowerCase().ToString()
-	assert.Equal(t, "desember", bulan)
-}
