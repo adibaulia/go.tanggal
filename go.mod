@@ -1,3 +1,3 @@
-module github.com/adibaulia/go-tanggal
+module github.com/adibaulia/go.tanggal
 
 go 1.15
