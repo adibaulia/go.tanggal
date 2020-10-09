@@ -64,10 +64,10 @@ func (b Bulan) ToString() string {
 
 //LowerCase returns lowercase of "bulan"
 func (b Bulan) LowerCase() Bulan {
-	return Bulan(strings.ToLower(b.ToString()))
+	return Bulan(strings.ToLower(b.Long().ToString()))
 }
 
 //UpperCase returns UPPERCASE of "bulan"
 func (b Bulan) UpperCase() Bulan {
-	return Bulan(strings.ToUpper(b.ToString()))
+	return Bulan(strings.ToUpper(b.Long().ToString()))
 }
