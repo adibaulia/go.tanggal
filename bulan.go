@@ -4,7 +4,6 @@ Package bulan implements a simple library for parsing to Indonesia name of Month
 package bulan
 
 import (
-	"strings"
 	"time"
 )
 
