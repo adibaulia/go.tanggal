@@ -61,13 +61,3 @@ func (b Bulan) Short() Bulan {
 func (b Bulan) ToString() string {
 	return string(b)
 }
-
-//LowerCase returns lowercase of "bulan"
-func (b Bulan) LowerCase() Bulan {
-	return Bulan(strings.ToLower(b.Long().ToString()))
-}
-
-//UpperCase returns UPPERCASE of "bulan"
-func (b Bulan) UpperCase() Bulan {
-	return Bulan(strings.ToUpper(b.Long().ToString()))
-}
